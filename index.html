@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* Changed to column to stack text and clock */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -21,30 +21,25 @@
             font-family: sans-serif;
             font-size: 3em;
             text-align: center;
-            border: 2px solid #00b7af; /* Added border */
-            padding: 20px; /* Added padding */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: 15px double #ff0000; /* Decorative red double border */
+            padding: 20px;
+            box-sizing: border-box;
+            color: #ff0000; /* Set default text color to red */
         }
         #clock {
-            font-size: 0.5em; /* Smaller font size for clock */
-            margin-top: 20px; /* Space between Hello World and clock */
+            font-size: 0.5em;
+            margin-top: 20px;
         }
-        .rainbow-text {
-            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
-            background-clip: text;
-            -webkit-background-clip: text; /* For Safari compatibility */
-            color: transparent; /* Make the actual text color transparent so the background clip works */
-            animation: rainbow-animation 5s linear infinite;
-        }
-        @keyframes rainbow-animation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .text-content {
+            color: #ff0000;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
-    <div class="rainbow-text">Hello World!</div>
+    <div class="text-content">Hello World!</div>
     <div id="clock"></div>
 
   <script>
